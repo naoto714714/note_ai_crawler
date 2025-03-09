@@ -105,7 +105,7 @@ class NoteCrawler:
             )
             response.raise_for_status()
             return response
-        except requests.RequestException as e:
+        except Exception as e:
             print(f"ページ取得中にエラーが発生しました: {e}")
             return None
 
