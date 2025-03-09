@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build_backend"
+
+[project]
+name = "note_ai_crawler"
+version = "0.1.0"
+description = "note.comのAIハッシュタグ付き記事をクロールするツール"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [
+    { name = "Naoto Kimura" }
+]
+
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.2",
+    "lxml>=4.9.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
